@@ -335,35 +335,6 @@
 			<option value="1">Yes</option>
 		</param>
 	</params>
-	<params group="email">
-		<param name="email_admin" type="radio" default="0" label="FG_EMAIL_REPORT" description="FG_EMAIL_REPORT_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="send_if_null" type="radio" default="1" label="FG_EMAIL_REPORT_NULL" description="FG_EMAIL_REPORT_NULL_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="email_digest" type="radio" default="1" label="FG_EMAIL_DIGEST" description="FG_EMAIL_DIGEST_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="digest_period" type="list" default="24" label="FG_DIGEST_PERIOD" description="FG_DIGEST_PERIOD_DESC">
-			<option value="1">1hr</option>
-			<option value="6">6hrs</option>
-			<option value="12">12hrs</option>
-			<option value="24">24hrs</option>
-			<option value="48">48hrs</option>
-			<option value="72">72hrs</option>
-			<option value="168">1 week</option>
-		</param>
-		<param name="admin_email" type="text" default="" size="40" label="FG_ADMIN_EMAIL" description="FG_ADMIN_EMAIL_DESC" />
-		<param name="email_subject" type="text" default="FeedGator Imports" size="40" label="FG_EMAIL_SUBJ" description="FG_EMAIL_SUBJ_DESC" />
-		<param name="html_email" type="radio" default="0" label="FG_HTML_EMAIL" description="FG_HTML_EMAIL_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-	</params>
 	<params group="advanced" addpath="/administrator/components/com_feedgator/elements">
 		<param name="base" type="fgbase" default=""  size="50" label="FG_BASE" description="FG_BASE_DESC" />
 		<param name="scrape_type" type="radio" default="cURL" label="FG_SCRAPE_TYPE" description="FG_SCRAPE_TYPE_DESC">
@@ -718,35 +689,6 @@
 			<option value="1">Yes</option>
 		</field>
 		<field name="save_sect_cats" type="radio" default="0" label="FG_JOOMLA_SEC_CAT" description="FG_JOOMLA_SEC_CAT_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-	</fieldset>
-	<fieldset group="email">
-		<field name="email_admin" type="radio" default="0" label="FG_EMAIL_REPORT" description="FG_EMAIL_REPORT_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="send_if_null" type="radio" default="1" label="FG_EMAIL_REPORT_NULL" description="FG_EMAIL_REPORT_NULL_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="email_digest" type="radio" default="1" label="FG_EMAIL_DIGEST" description="FG_EMAIL_DIGEST_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="digest_period" type="list" default="24" label="FG_DIGEST_PERIOD" description="FG_DIGEST_PERIOD_DESC">
-			<option value="1">1hr</option>
-			<option value="6">6hrs</option>
-			<option value="12">12hrs</option>
-			<option value="24">24hrs</option>
-			<option value="48">48hrs</option>
-			<option value="72">72hrs</option>
-			<option value="168">1 week</option>
-		</field>
-		<field name="admin_email" type="text" default="" size="40" label="FG_ADMIN_EMAIL" description="FG_ADMIN_EMAIL_DESC" />
-		<field name="email_subject" type="text" default="FeedGator Imports" size="40" label="FG_EMAIL_SUBJ" description="FG_EMAIL_SUBJ_DESC" />
-		<field name="html_email" type="radio" default="0" label="FG_HTML_EMAIL" description="FG_HTML_EMAIL_DESC">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</field>
