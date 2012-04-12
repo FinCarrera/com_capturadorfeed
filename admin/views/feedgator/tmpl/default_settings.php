@@ -71,11 +71,6 @@ $pane =& JPane::getInstance('tabs',$options);
 		echo $this->params->render('params','text');
 		
 		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_HTML_FLTRS'),'panel9');
-		
-		echo $this->params->render('params','html');
-		
-		echo $pane->endPanel();
 		echo $pane->startPanel(JText::_('FG_TAB_IMPORT_FLTRS'),'panel10');
 		
 		echo $this->params->render('params','import_1');
@@ -140,11 +135,6 @@ $pane =& JPane::getInstance('tabs',$options);
 		echo $pane->startPanel(JText::_('FG_TAB_TXT_FLTRS'),'panel8');
 		
 		echo FeedgatorHelper::renderForm($this->params->getParams('params','text'));
-		
-		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_HTML_FLTRS'),'panel9');
-		
-		echo FeedgatorHelper::renderForm($this->params->getParams('params','html'));
 		
 		echo $pane->endPanel();
 		echo $pane->startPanel(JText::_('FG_TAB_IMPORT_FLTRS'),'panel10');

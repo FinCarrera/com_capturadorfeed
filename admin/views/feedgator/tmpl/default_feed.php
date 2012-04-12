@@ -130,11 +130,6 @@ if(J_VERSION < 1.6) {
 		echo $this->fgParams->render('params','text');
 		
 		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_HTML_FLTRS'),'panel9');
-		
-		echo $this->fgParams->render('params','html');
-		
-		echo $pane->endPanel();
 		echo $pane->startPanel(JText::_('FG_TAB_IMPORT_FLTRS'),'panel10');
 		
 		echo $this->fgParams->render('data','import_1');
@@ -192,11 +187,6 @@ if(J_VERSION < 1.6) {
 		echo $pane->startPanel(JText::_('FG_TAB_TXT_FLTRS'),'panel8');
 		
 		echo FeedgatorHelper::renderForm($this->fgParams->getParams('params','text'));
-		
-		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_HTML_FLTRS'),'panel9');
-		
-		echo FeedgatorHelper::renderForm($this->fgParams->getParams('params','html'));
 		
 		echo $pane->endPanel();
 		echo $pane->startPanel(JText::_('FG_TAB_IMPORT_FLTRS'),'panel10');
