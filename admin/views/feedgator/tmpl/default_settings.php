@@ -88,11 +88,6 @@ $pane =& JPane::getInstance('tabs',$options);
 		echo $this->params->render('params','tagging');
 		
 		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_EMAIL'),'panel12');
-		
-		echo $this->params->render('params','email');
-		
-		echo $pane->endPanel();
 		echo $pane->startPanel(JText::_('FG_TAB_ADV'),'panel13');
 		
 		echo $this->params->render('params','advanced');
