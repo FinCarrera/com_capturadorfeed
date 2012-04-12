@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- last edit 2.3.3 -->
+<config>
+	<params group="global_feed" addpath="/administrator/components/com_feedgator/elements">
+		<param name="default_type" type="fgcontent" size="10" label="FG_DEFAULT_TYPE" description="FG_DEFAULT_TYPE_DESC" />		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
+		<param name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
+			<option value="0">Don't Save</option>
+			<option value="1">Use Default Joomla Author Alias</option>
+			<option value="2">Use Default Feed Author Alias</option>
+			<option value="3">Use Feed Author -> if not set use Feed Title</option>
+			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
+		</param>
+		<param name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
+			<option value="0">No</option>
+			<option value="top">Top</option>
+			<option value="bottom">bottom</option>
+		</param>
+	</params>
+	<params group="feed_1" addpath="/administrator/components/com_feedgator/elements">
+		<param name="title" type="text" default="" size="50" label="FG_FEED_TITLE" description="FG_FEED_TITLE_DESC" />
+		<param name="feed" type="text" default="" size="50" label="FG_FEED_URL" description="FG_FEED_URL_DESC" />
+		<param name="content_type" type="fgcontent" var="dyna" size="10" label="FG_CONTENT_TYPE" description="FG_CONTENT_TYPE_DESC" />
+		<param name="sectionid" type="fgcategories" var="section" size="10" label="FG_SECTION_TYPE" description="FG_SECTION_TYPE_DESC" />
+		<param name="catid" type="fgcategories" var="category" size="10" label="FG_CATEGORY_TYPE" description="FG_CATEGORY_TYPE_DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
+	</params>
+	<params group="feed_2">
+		<param name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
+			<option value="0">Don't Save</option>
+			<option value="1">Use Default Joomla Author Alias</option>
+			<option value="2">Use Default Feed Author Alias</option>
+			<option value="3">Use Feed Author -> if not set use Feed Title</option>
+			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
+		</param>
+		<param name="default_author_alias" type="text" default="" size="50" label="FG_DEFAULT_AUTHOR_ALIAS" description="FG_DEFAULT_AUTHOR_ALIAS_DESC" />
+		<param name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
+			<option value="0">No</option>
+			<option value="top">Top</option>
+			<option value="bottom">bottom</option>
+		</param>		
+	</params>
+	<params group="feed_3">
+		<param name="published" type="radio" default="0" label="FG_FEED_PUBLISHED" description="FG_FEED_PUBLISHED_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+	</params>
+	<params group="publishing_1">
+		<param name="front_page" type="radio" default="0" label="FG_SHOW_FRONT" description="FG_SHOW_FRONT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="publishing_2" addpath="/administrator/components/com_feedgator/elements">
+		<param name="auto_publish" type="radio" default="0" label="FG_PUB_AUTO" description="FG_PUB_AUTO_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="access" type="fgaccess" size="10" default="0" label="FG_ACCESS_LEVEL" description="FG_ACCESS_LEVEL_DESC" />		
+		<param name="created_date" type="list" default="0" label="FG_CREATED_DATE" description="FG_CREATED_DATE_DESC">
+			<option value="0">Use Feed Date</option>
+			<option value="1">Use Processed Date</option>
+		</param>
+		<param name="pub_date" type="list" default="0" label="FG_PUB_DATE" description="FG_PUB_DATE_DESC">
+			<option value="0">Use Feed Date</option>
+			<option value="1">Use Processed Date</option>
+		</param>
+		<param name="advance_date" type="radio" default="0" label="FG_ALLOW_FUTURE" description="FG_ALLOW_FUTURE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="publish_duration" type="text" default="0" label="FG_PUB_DUR" description="FG_PUB_DUR_DESC" />
+		<param name="pub_dur_type" type="list" default="0" label="FG_PUB_DUR_TYPE" description="FG_PUB_DUR_TYPE_DESC">
+			<option value="0">Days</option>
+			<option value="1">Hours</option>
+			<option value="2">Minutes</option>
+		</param>
+	</params>
+	<params group="duplicates">
+		<param name="import_limit" type="text" default="0" label="FG_IMPORT_LIMIT" description="FG_IMPORT_LIMIT_DESC" />
+		<param name="cron_import_limit" type="text" default="0" label="FG_CRON_IMPORT_LIMIT" description="FG_CRON_IMPORT_LIMIT_DESC" />
+		<param name="pseudocron_import_limit" type="text" default="1" label="FG_PSEUDOCRON_IMPORT_LIMIT" description="FG_PSEUDOCRON_IMPORT_LIMIT_DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="cron_interval" type="text" default="5" label="FG_CRON_INTERVAL" description="FG_CRON_INTERVAL_DESC" />
+		<param name="pseudocron_interval" type="text" default="5" label="FG_PSEUDOCRON_INTERVAL" description="FG_PSEUDOCRON_INTERVAL_DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />		
+		<param name="check_existing" type="list" default="0" label="FG_CHECK_EXIST" description="FG_CHECK_EXIST_DESC">
+			<option value="0">Trust Feed Identifiers</option>
+			<option value="1">Perform Checks</option>
+		</param>
+		<param name="compare_existing" type="list" default="0" label="FG_COMPARE_EXIST" description="FG_COMPARE_EXIST_DESC">
+			<option value="0">Basic</option>
+			<option value="1">Thorough</option>
+			<option value="2">Exhaustive</option>
+		</param>
+		<param name="force_new" type="radio" default="0" label="FG_FORCE_NEW" description="FG_FORCE_NEW_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="check_text" type="radio" default="1" label="FG_CHECK_TEXT_TYPE" description="FG_CHECK_TEXT_TYPE_DESC">
+			<option value="0">Full Text</option>
+			<option value="1">Intro Text</option>
+		</param>
+		<param name="merging" type="list" default="1" label="FG_MERGE_TYPE" description="FG_MERGE_TYPE_DESC">
+			<option value="0">Don't Merge - Make New</option>
+			<option value="1">Merge Text</option>
+			<option value="2">Over-write</option>
+		</param>
+	</params>
+	<params group="text_1">
+		<param name="create_art" type="radio" default="1" label="FG_CREATE_ART" description="FG_CREATE_ART_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="show_html" type="radio" default="1" label="FG_SHOW_HTML" description="FG_SHOW_HTML_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="fulltext" type="radio" default="0" label="FG_FULL_TEXT" description="FG_FULL_TEXT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="combine_text" type="radio" default="0" label="FG_COMBINE_TEXT" description="FG_COMBINE_TEXT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="relax_parsing" type="list" default="0" label="FG_RELAX_PARSING" description="FG_RELAX_PARSING_DESC">
+	   	   <option value="0">Default</option>
+		   <option value="1">Minor relaxation</option>
+		   <option value="2">Moderate relaxation</option>
+		   <option value="3">Full relaxation</option>
+	    </param>
+	    <param name="readability_title" type="radio" default="0" label="FG_READABILITY_TITLE" description="FG_READABILITY_TITLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="max_length" type="text" default="0" label="FG_MAX_LENGTH" description="FG_MAX_LENGTH_DESC" />
+		<param name="max_length_type" type="list" default="char" label="FG_MAX_LENGTH_TYPE" description="FG_MAX_LENGTH_TYPE_DESC">
+	   	   <option value="char">Characters</option>
+		   <option value="word">Words</option>
+		   <option value="sent">Sentences</option>
+	    </param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="onlyintro" type="radio" default="0" label="FG_ONLY_INTRO" description="FG_ONLY_INTRO_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="trim_to" type="text" default="350" size="50" label="FG_TRIM_TO" description="FG_TRIM_TO_DESC" />
+		<param name="trim_type" type="list" default="char" label="FG_TRIM_TYPE" description="FG_TRIM_TYPE_DESC">
+	   	   <option value="char">Characters</option>
+		   <option value="word">Words</option>
+		   <option value="sent">Sentences</option>
+	    </param>
+		<param name="dotdotdot" type="radio" default="1" label="FG_DOTDOTDOT" description="FG_DOTDOTDOT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="ignore_empty_intro" type="radio" default="0" label="FG_IGNORE_EMPTY" description="FG_IGNORE_EMPTY_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="text_2">
+		<param name="default_introtext" type="textarea" default="" rows="10" cols="60" label="FG_DEFAULT_INTRO" description="FG_DEFAULT_INTRO_DESC" />
+	</params>
+	<params group="languages">
+			<param name="feed_encoding" type="text" default="" size="50" label="FG_FEED_ENCODING" description="FG_FEED_ENCODING_DESC" />
+			<param name="translit" type="radio" default="0" label="FG_TRANSLITERATE" description="FG_TRANSLITERATE_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="custom_translit" type="textarea" default="" rows="20" cols="60" label="FG_CUSTOM_TRANSLIT" description="FG_CUSTOM_TRANSLIT_DESC" />
+	</params>
+	<params group="images_1">
+		<param name="save_img" type="radio" default="0" label="FG_SAVE_IMG" description="FG_SAVE_IMG_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="rel_src" type="radio" default="0" label="FG_REL_SRC" description="FG_REL_SRC_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="img_folder" type="text" default="media/feedgator/images/" size="50" label="FG_IMG_FOLDER" description="FG_IMG_FOLDER_DESC" />
+		<param name="sub_folder" type="list" default="0" label="FG_SUB_FOLDER" description="FG_SUB_FOLDER_DESC">
+			<option value="0">None</option>
+			<option value="1">Sub-folder per day</option>
+			<option value="2">Sub-folder per week</option>
+			<option value="3">Sub-folder per month</option>
+		</param>
+	</params>
+	<params group="images_2">
+		<param name="img_name_type" type="list" default="1" label="FG_IMG_NAME_TYPE" description="FG_IMG_NAME_TYPE_DESC">
+			<option value="0">Use Image Title/Alt</option>
+			<option value="1">Use Original Filename</option>
+			<option value="2">Use md5 hash</option>
+		</param>
+	</params>
+	<params group="images_3">
+		<param name="img_class" type="text" default="" size="50" label="FG_IMG_CLASS" description="FG_IMG_CLASS_DESC" />
+		<param name="rmv_img_style" type="radio" default="0" label="FG_RMV_IMG_STYLE" description="FG_RMV_IMG_STYLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="alt_img_ext" type="radio" default="1" label="FG_ALT_IMG_EXT" description="FG_ALT_IMG_EXT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="force_enc_image" type="radio" default="0" label="FG_FORCE_ENC_IMAGE" description="FG_FORCE_ENC_IMAGE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="process_enc" type="radio" default="1" label="FG_PROCESS_ENC" description="FG_PROCESS_ENC_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="process_enc_images" type="radio" default="1" label="FG_PROCESS_ENC_IMGS" description="FG_PROCESS_ENC_IMGS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="save_enc" type="radio" default="0" label="FG_SAVE_ENC" description="FG_SAVE_ENC_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="save_enc_image_as_img" type="radio" default="0" label="FG_SAVE_ENC_IMAGE_AS_IMG" description="FG_SAVE_ENC_IMAGE_AS_IMG_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="media_folder" type="text" default="media/feedgator/" size="50" label="FG_MEDIA_FOLDER" description="FG_MEDIA_FOLDER_DESC" />
+	</params>
+	<params group="links">
+		<param name="link_table" type="radio" default="0" label="FG_LINK_TABLE" description="FG_LINK_TABLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="link_nofollow" type="radio" default="1" label="FG_LINK_NOFOLLOW" description="FG_LINK_NOFOLLOW_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="link_target" type="list" default="0" label="FG_LINK_TARGET" description="FG_LINK_TARGET_DESC">
+			<option value="0">None</option>
+			<option value="_blank">_blank</option>
+			<option value="_parent">_parent</option>
+			<option value="_self">_self</option>
+			<option value="_top">_top</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="show_orig_link" type="radio" default="1" label="FG_SHOW_TRACKBACK" description="FG_SHOW_TRACKBACK_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="shortlink" type="radio" default="0" label="FG_SHOW_TRACKBACK_SHORT" description="FG_SHOW_TRACKBACK_SHORT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="orig_link_text" type="text" default="Read more"  size="40" label="FG_TRACKBACK_TEXT" description="FG_TRACKBACK_TEXT_DESC" />
+		<param name="target_frame" type="list" default="none" label="FG_TARGET_FRAME" description="FG_TARGET_FRAME_DESC">
+			<option value="none">None</option>
+			<option value="_blank">_blank</option>
+			<option value="_parent">_parent</option>
+			<option value="_self">_self</option>
+			<option value="_top">_top</option>
+			<option value="custom">Custom</option>
+		</param>
+		<param name="custom_frame" type="text" default="" label="FG_CUST_FRAME" description="FG_CUST_FRAME_DESC" />
+		<param name="trackback_class" type="text" default="rssreadon" size="50" label="FG_TRACKBACK_CLASS" description="FG_TRACKBACK_CLASS_DESC" />
+		<param name="trackback_rel" type="text" default="external" size="50" label="FG_TRACKBACK_REL" description="FG_TRACKBACK_REL_DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="shortened_url" type="list" default="0" label="FG_SHORTENED_URL" description="FG_SHORTENED_URL_DESC">
+			<option value="0">No</option>
+			<option value="1">Bit.ly</option>
+			<option value="2">Goo.gl</option>
+		</param>
+		<param name="bitly_login" type="text" default="" size="50" label="FG_BITLY_LOGIN" description="FG_BITLY_LOGIN_DESC" />
+		<param name="bitly_api_key" type="text" default="" size="50" label="FG_BITLY_API" description="FG_BITLY_API_DESC" />
+	</params>
+	<params group="text">
+		<param name="text_filter" type="radio" default="0" label="FG_TEXT_FILTERING" description="FG_TEXT_FILTERING_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="text_filter_remove" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RMV" description="FG_TEXT_FLTR_RMV_DESC" />
+		<param name="text_filter_replace" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RPLC" description="FG_TEXT_FLTR_RPLC_DESC" />
+		<param name="text_filter_regex" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RGX" description="FG_TEXT_FLTR_RGX_DESC" />
+	</params>
+	<params group="html">
+		<param name="xhtml_clean" type="radio" default="0" label="FG_FORCE_XHTML" description="FG_FORCE_XHTML_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="strip_html_tags" type="list" default="0" label="FG_STRIP_HTML" description="STRIP_HTML_DESC2">
+			<option value="0">Apply Strip HTML Tag List Below</option>
+			<option value="1">Strip All Tags</option>
+		</param>
+		<param name="strip_list" type="textarea" default="" rows="5" cols="60" label="FG_STRIP_LIST" description="FG_STRIP_LIST_DESC" />
+		<param name="remove_by_attrib" type="textarea" default="" rows="5" cols="60" label="FG_RMV_BY_ATTRIB" description="FG_RMV_BY_ATTRIB_DESC" />
+		<param name="disallow_attribs" type="radio" default="0" label="FG_DISALLOW_ATTRIBS" description="FG_DISALLOW_ATTRIBS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="remove_dups_emp" type="radio" default="1" label="FG_REMOVE_DUPS_EMP" description="FG_REMOVE_DUPS_EMP_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="remove_bad" type="radio" default="0" label="FG_REMOVE_BAD" description="FG_REMOVE_BAD_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="remove_ms" type="radio" default="0" label="FG_REMOVE_MS" description="FG_REMOVE_MS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="tidy" type="list" default="0" label="FG_TIDY" description="FG_TIDY_DESC">
+			<option value="0">None</option>
+			<option value="-1">Compress</option>
+			<option value="1">Beautify</option>
+		</param>
+	</params>
+	<params group="import_1">
+		<param name="filtering" type="radio" default="0" label="FG_FILTERING" description="FG_FILTERING_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="import_2">
+		<param name="save_filter_result" type="radio" default="0" label="FG_SAVE_FILTER_RESULT" description="FG_SAVE_FILTER_RESULT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="import_3">
+		<param name="filter_whitelist" type="textarea" default="" rows="10" cols="60" label="FG_WHITELIST" description="FG_WHITELIST_DESC" />
+		<param name="filter_blacklist" type="textarea" default="" rows="10" cols="60" label="FG_BLACKLIST" description="FG_BLACKLIST_DESC" />
+	</params>
+	<params group="tagging">
+		<param name="compute_tags" type="radio" default="0" label="FG_ADD_META" description="FG_ADD_META_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="use_addkeywords" type="radio" default="0" label="FG_USE_ADDKEYWORDS" description="FG_USE_ADDKEYWORDS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="use_yahoo_te" type="radio" default="0" label="FG_USE_YAHOO" description="FG_USE_YAHOO_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="yahoo_app_id" type="text" default="feedgatortemp" label="FG_YAHOO_ID" description="FG_YAHOO_ID_DESC" />
+		<param name="max_tags" type="text" default="5" label="FG_MAX_TAGS" description="FG_MAX_TAGS_DESC" />
+		<param name="min_tag_chars" type="text" default="3" label="FG_MIN_TAGS" description="FG_MIN_TAGS_DESC" />
+		<param name="use_ignore_list" type="radio" default="0" label="FG_IGNORE_LIST" description="FG_IGNORE_LIST_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="ignore_list" type="textarea" default="" rows="3" cols="50" label="FG_ADDITIONAL_IGNORE_LIST" description="FG_ADDITIONAL_IGNORE_LIST_DESC">
+		</param>
+		<param name="save_feed_cats" type="radio" default="0" label="FG_FEED_CATS" description="FG_FEED_CATS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="save_sect_cats" type="radio" default="0" label="FG_JOOMLA_SEC_CAT" description="FG_JOOMLA_SEC_CAT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="email">
+		<param name="email_admin" type="radio" default="0" label="FG_EMAIL_REPORT" description="FG_EMAIL_REPORT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="send_if_null" type="radio" default="1" label="FG_EMAIL_REPORT_NULL" description="FG_EMAIL_REPORT_NULL_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="email_digest" type="radio" default="1" label="FG_EMAIL_DIGEST" description="FG_EMAIL_DIGEST_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="digest_period" type="list" default="24" label="FG_DIGEST_PERIOD" description="FG_DIGEST_PERIOD_DESC">
+			<option value="1">1hr</option>
+			<option value="6">6hrs</option>
+			<option value="12">12hrs</option>
+			<option value="24">24hrs</option>
+			<option value="48">48hrs</option>
+			<option value="72">72hrs</option>
+			<option value="168">1 week</option>
+		</param>
+		<param name="admin_email" type="text" default="" size="40" label="FG_ADMIN_EMAIL" description="FG_ADMIN_EMAIL_DESC" />
+		<param name="email_subject" type="text" default="FeedGator Imports" size="40" label="FG_EMAIL_SUBJ" description="FG_EMAIL_SUBJ_DESC" />
+		<param name="html_email" type="radio" default="0" label="FG_HTML_EMAIL" description="FG_HTML_EMAIL_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="advanced" addpath="/administrator/components/com_feedgator/elements">
+		<param name="base" type="fgbase" default=""  size="50" label="FG_BASE" description="FG_BASE_DESC" />
+		<param name="scrape_type" type="radio" default="cURL" label="FG_SCRAPE_TYPE" description="FG_SCRAPE_TYPE_DESC">
+			<option value="cURL">cURL</option>
+			<option value="fopen">fopen</option>
+		</param>
+		<param name="force_fsockopen" type="radio" default="0" label="FG_FORCE_FSOCK" description="FG_FORCE_FSOCK_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="img_check" type="radio" default="1" label="FG_IMAGE_CHECK" description="FG_IMAGE_CHECK_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="use_sp_cache" type="radio" default="0" label="FG_SP_CACHE" description="FG_SP_CACHE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="set_sp_timeout" type="text" default="" label="FG_SP_TIMEOUT" description="FG_SP_TIMEOUT_DESC" />
+		<param name="debug" type="radio" default="0" label="FG_DEBUG" description="FG_DEBUG_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="notify_dev" type="radio" default="0" label="FG_NOTIFY_DEV" description="FG_NOTIFY_DEV_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+
+	<fieldset group="global_feed" addpath="/administrator/components/com_feedgator/elements">
+		<field name="default_type" type="fgcontent" size="10" label="FG_DEFAULT_TYPE" description="FG_DEFAULT_TYPE_DESC" />		
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
+		<field name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
+			<option value="0">Don't Save</option>
+			<option value="1">Use Default Joomla Author Alias</option>
+			<option value="2">Use Default Feed Author Alias</option>
+			<option value="3">Use Feed Author -> if not set use Feed Title</option>
+			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
+		</field>
+		<field name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
+			<option value="0">No</option>
+			<option value="top">Top</option>
+			<option value="bottom">bottom</option>
+		</field>
+	</fieldset>
+	<fieldset group="feed_1" addpath="/administrator/components/com_feedgator/elements">
+		<field name="title" type="text" default="" size="50" label="FG_FEED_TITLE" description="FG_FEED_TITLE_DESC" />
+		<field name="feed" type="text" default="" size="50" label="FG_FEED_URL" description="FG_FEED_URL_DESC" />
+		<field name="content_type" type="fgcontent" var="dyna" size="10" label="FG_CONTENT_TYPE" description="FG_CONTENT_TYPE_DESC" />
+		<field name="sectionid" type="fgcategories" var="section" size="10" label="FG_SECTION_TYPE" description="FG_SECTION_TYPE_DESC" />
+		<field name="catid" type="fgcategories" var="category" size="10" label="FG_CATEGORY_TYPE" description="FG_CATEGORY_TYPE_DESC" />
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
+	</fieldset>
+	<fieldset group="feed_2">
+		<field name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
+			<option value="0">Don't Save</option>
+			<option value="1">Use Default Joomla Author Alias</option>
+			<option value="2">Use Default Feed Author Alias</option>
+			<option value="3">Use Feed Author -> if not set use Feed Title</option>
+			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
+		</field>
+		<field name="default_author_alias" type="text" default="" size="50" label="FG_DEFAULT_AUTHOR_ALIAS" description="FG_DEFAULT_AUTHOR_ALIAS_DESC" />
+		<field name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
+			<option value="0">No</option>
+			<option value="top">Top</option>
+			<option value="bottom">bottom</option>
+		</field>		
+	</fieldset>
+	<fieldset group="feed_3">
+		<field name="published" type="radio" default="0" label="FG_FEED_PUBLISHED" description="FG_FEED_PUBLISHED_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+	</fieldset>
+	<fieldset group="publishing_1">
+		<field name="front_page" type="radio" default="0" label="FG_SHOW_FRONT" description="FG_SHOW_FRONT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	</fieldset>
+	<fieldset group="publishing_2">
+		<field name="auto_publish" type="radio" default="0" label="FG_PUB_AUTO" description="FG_PUB_AUTO_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="created_date" type="list" default="0" label="FG_CREATED_DATE" description="FG_CREATED_DATE_DESC">
+			<option value="0">Use Feed Date</option>
+			<option value="1">Use Processed Date</option>
+		</field>
+		<field name="pub_date" type="list" default="0" label="FG_PUB_DATE" description="FG_PUB_DATE_DESC">
+			<option value="0">Use Feed Date</option>
+			<option value="1">Use Processed Date</option>
+		</field>
+		<field name="advance_date" type="radio" default="0" label="FG_ALLOW_FUTURE" description="FG_ALLOW_FUTURE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="publish_duration" type="text" default="0" label="FG_PUB_DUR" description="FG_PUB_DUR_DESC" />
+		<field name="pub_dur_type" type="list" default="0" label="FG_PUB_DUR_TYPE" description="FG_PUB_DUR_TYPE_DESC">
+			<option value="0">Days</option>
+			<option value="1">Hours</option>
+			<option value="2">Minutes</option>
+		</field>
+	</fieldset>
+	<fieldset group="duplicates">
+		<field name="import_limit" type="text" default="0" label="FG_IMPORT_LIMIT" description="FG_IMPORT_LIMIT_DESC" />
+		<field name="cron_import_limit" type="text" default="0" label="FG_CRON_IMPORT_LIMIT" description="FG_CRON_IMPORT_LIMIT_DESC" />
+		<field name="pseudocron_import_limit" type="text" default="1" label="FG_PSEUDOCRON_IMPORT_LIMIT" description="FG_PSEUDOCRON_IMPORT_LIMIT_DESC" />
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="cron_interval" type="text" default="5" label="FG_CRON_INTERVAL" description="FG_CRON_INTERVAL_DESC" />
+		<field name="pseudocron_interval" type="text" default="5" label="FG_PSEUDOCRON_INTERVAL" description="FG_PSEUDOCRON_INTERVAL_DESC" />
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="check_existing" type="list" default="0" label="FG_CHECK_EXIST" description="FG_CHECK_EXIST_DESC">
+			<option value="0">Trust Feed Identifiers</option>
+			<option value="1">Perform Checks</option>
+		</field>
+		<field name="compare_existing" type="list" default="0" label="FG_COMPARE_EXIST" description="FG_COMPARE_EXIST_DESC">
+			<option value="0">Basic</option>
+			<option value="1">Thorough</option>
+			<option value="2">Exhaustive</option>
+		</field>
+		<field name="check_text" type="radio" default="1" label="FG_CHECK_TEXT_TYPE" description="FG_CHECK_TEXT_TYPE_DESC">
+			<option value="0">Full Text</option>
+			<option value="1">Intro Text</option>
+		</field>
+		<field name="merging" type="list" default="1" label="FG_MERGE_TYPE" description="FG_MERGE_TYPE_DESC">
+			<option value="0">Don't Merge - Make New</option>
+			<option value="1">Merge Text</option>
+			<option value="2">Over-write</option>
+		</field>
+	</fieldset>
+	<fieldset group="text_1">
+		<field name="create_art" type="radio" default="1" label="FG_CREATE_ART" description="FG_CREATE_ART_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="show_html" type="radio" default="1" label="FG_SHOW_HTML" description="FG_SHOW_HTML_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="fulltext" type="radio" default="0" label="FG_FULL_TEXT" description="FG_FULL_TEXT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="combine_text" type="radio" default="0" label="FG_COMBINE_TEXT" description="FG_COMBINE_TEXT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="relax_parsing" type="list" default="0" label="FG_RELAX_PARSING" description="FG_RELAX_PARSING_DESC">
+	   	   <option value="0">Default</option>
+		   <option value="1">Minor relaxation</option>
+		   <option value="2">Moderate relaxation</option>
+		   <option value="3">Full relaxation</option>
+	    </field>
+	    <field name="readability_title" type="radio" default="0" label="FG_READABILITY_TITLE" description="FG_READABILITY_TITLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="max_length" type="text" default="0" label="FG_MAX_LENGTH" description="FG_MAX_LENGTH_DESC" />
+		<field name="max_length_type" type="list" default="char" label="FG_MAX_LENGTH_TYPE" description="FG_MAX_LENGTH_TYPE_DESC">
+	   	   <option value="char">Characters</option>
+		   <option value="word">Words</option>
+		   <option value="sent">Sentences</option>
+	    </field>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="onlyintro" type="radio" default="0" label="FG_ONLY_INTRO" description="FG_ONLY_INTRO_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="trim_to" type="text" default="350" size="50" label="FG_TRIM_TO" description="FG_TRIM_TO_DESC" />
+		<field name="trim_type" type="list" default="char" label="FG_TRIM_TYPE" description="FG_TRIM_TYPE_DESC">
+	   	   <option value="char">Characters</option>
+		   <option value="word">Words</option>
+		   <option value="sent">Sentences</option>
+	    </field>
+		<field name="dotdotdot" type="radio" default="1" label="FG_DOTDOTDOT" description="FG_DOTDOTDOT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ignore_empty_intro" type="radio" default="0" label="FG_IGNORE_EMPTY" description="FG_IGNORE_EMPTY_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	</fieldset>
+	<fieldset group="text_2">
+		<field name="default_introtext" type="textarea" default="" rows="10" cols="60" label="FG_DEFAULT_INTRO" description="FG_DEFAULT_INTRO_DESC" />
+	</fieldset>
+	<fieldset group="languages">
+			<field name="feed_encoding" type="text" default="" size="50" label="FG_FEED_ENCODING" description="FG_FEED_ENCODING_DESC" />
+			<field name="translit" type="radio" default="0" label="FG_TRANSLITERATE" description="FG_TRANSLITERATE_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</field>
+			<field name="custom_translit" type="textarea" default="" rows="20" cols="60" label="FG_CUSTOM_TRANSLIT" description="FG_CUSTOM_TRANSLIT_DESC" />
+	</fieldset>
+	<fieldset group="images_1">
+		<field name="save_img" type="radio" default="0" label="FG_SAVE_IMG" description="FG_SAVE_IMG_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="rel_src" type="radio" default="0" label="FG_REL_SRC" description="FG_REL_SRC_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="img_folder" type="text" default="media/feedgator/images/" size="50" label="FG_IMG_FOLDER" description="FG_IMG_FOLDER_DESC" />
+		<field name="sub_folder" type="list" default="0" label="FG_SUB_FOLDER" description="FG_SUB_FOLDER_DESC">
+			<option value="0">None</option>
+			<option value="1">Sub-folder per day</option>
+			<option value="2">Sub-folder per week</option>
+			<option value="3">Sub-folder per month</option>
+		</field>
+	</fieldset>
+	<fieldset group="images_2">
+		<field name="img_name_type" type="list" default="0" label="FG_IMG_NAME_TYPE" description="FG_IMG_NAME_TYPE_DESC">
+			<option value="0">Use Image Title/Alt</option>
+			<option value="1">Use Original Filename</option>
+			<option value="2">Use md5 hash</option>
+		</field>
+	</fieldset>
+	<fieldset group="images_3">
+		<field name="img_class" type="text" default="" size="50" label="FG_IMG_CLASS" description="FG_IMG_CLASS_DESC" />
+		<field name="rmv_img_style" type="radio" default="0" label="FG_RMV_IMG_STYLE" description="FG_RMV_IMG_STYLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="alt_img_ext" type="radio" default="1" label="FG_ALT_IMG_EXT" description="FG_ALT_IMG_EXT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="force_enc_image" type="radio" default="0" label="FG_FORCE_ENC_IMAGE" description="FG_FORCE_ENC_IMAGE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="process_enc" type="radio" default="1" label="FG_PROCESS_ENC" description="FG_PROCESS_ENC_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="process_enc_images" type="radio" default="1" label="FG_PROCESS_ENC_IMGS" description="FG_PROCESS_ENC_IMGS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="save_enc" type="radio" default="0" label="FG_SAVE_ENC" description="FG_SAVE_ENC_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="save_enc_image_as_img" type="radio" default="0" label="FG_SAVE_ENC_IMAGE_AS_IMG" description="FG_SAVE_ENC_IMAGE_AS_IMG_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="media_folder" type="text" default="media/feedgator/" size="50" label="FG_MEDIA_FOLDER" description="FG_MEDIA_FOLDER_DESC" />
+	</fieldset>
+	<fieldset group="links">
+		<field name="link_table" type="radio" default="0" label="FG_LINK_TABLE" description="FG_LINK_TABLE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="link_nofollow" type="radio" default="1" label="FG_LINK_NOFOLLOW" description="FG_LINK_NOFOLLOW_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="link_target" type="list" default="0" label="FG_LINK_TARGET" description="FG_LINK_TARGET_DESC">
+			<option value="0">None</option>
+			<option value="_blank">_blank</option>
+			<option value="_parent">_parent</option>
+			<option value="_self">_self</option>
+			<option value="_top">_top</option>
+		</field>
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="show_orig_link" type="radio" default="1" label="FG_SHOW_TRACKBACK" description="FG_SHOW_TRACKBACK_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="shortlink" type="radio" default="0" label="FG_SHOW_TRACKBACK_SHORT" description="FG_SHOW_TRACKBACK_SHORT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="orig_link_text" type="text" default="Read more"  size="40" label="FG_TRACKBACK_TEXT" description="FG_TRACKBACK_TEXT_DESC" />
+		<field name="target_frame" type="list" default="none" label="FG_TARGET_FRAME" description="FG_TARGET_FRAME_DESC">
+			<option value="none">None</option>
+			<option value="_blank">_blank</option>
+			<option value="_parent">_parent</option>
+			<option value="_self">_self</option>
+			<option value="_top">_top</option>
+			<option value="custom">Custom</option>
+		</field>
+		<field name="custom_frame" type="text" default="" label="FG_CUST_FRAME" description="FG_CUST_FRAME_DESC" />
+		<field name="trackback_class" type="text" default="rssreadon" size="50" label="FG_TRACKBACK_CLASS" description="FG_TRACKBACK_CLASS_DESC" />
+		<field name="trackback_rel" type="text" default="external" size="50" label="FG_TRACKBACK_REL" description="FG_TRACKBACK_REL_DESC" />
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+		<field name="shortened_url" type="list" default="0" label="FG_SHORTENED_URL" description="FG_SHORTENED_URL_DESC">
+			<option value="0">No</option>
+			<option value="1">Bit.ly</option>
+			<option value="2">Goo.gl</option>
+		</field>
+		<field name="bitly_login" type="text" default="" size="50" label="FG_BITLY_LOGIN" description="FG_BITLY_LOGIN_DESC" />
+		<field name="bitly_api_key" type="text" default="" size="50" label="FG_BITLY_API" description="FG_BITLY_API_DESC" />
+	</fieldset>
+	<fieldset group="text">
+		<field name="text_filter" type="radio" default="0" label="FG_TEXT_FLTR" description="FG_TEXT_FLTR_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="text_filter_remove" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RMV" description="FG_TEXT_FLTR_RMV_DESC" />
+		<field name="text_filter_replace" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RPLC" description="FG_TEXT_FLTR_RPLC_DESC" />
+		<field name="text_filter_regex" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RGX" description="FG_TEXT_FLTR_RGX_DESC" />
+	</fieldset>
+	<fieldset group="html">
+		<field name="xhtml_clean" type="radio" default="0" label="FG_FORCE_XHTML" description="FG_FORCE_XHTML_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="strip_html_tags" type="list" default="0" label="FG_STRIP_HTML" description="STRIP_HTML_DESC2">
+			<option value="0">Apply Strip HTML Tag List Below</option>
+			<option value="1">Strip All Tags</option>
+		</field>
+		<field name="strip_list" type="textarea" default="" rows="5" cols="60" label="FG_STRIP_LIST" description="FG_STRIP_LIST_DESC" />
+		<field name="remove_by_attrib" type="textarea" default="" rows="5" cols="60" label="FG_RMV_BY_ATTRIB" description="FG_RMV_BY_ATTRIB_DESC" />
+		<field name="disallow_attribs" type="radio" default="0" label="FG_DISALLOW_ATTRIBS" description="FG_DISALLOW_ATTRIBS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="remove_dups_emp" type="radio" default="1" label="FG_REMOVE_DUPS_EMP" description="FG_REMOVE_DUPS_EMP_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="remove_bad" type="radio" default="0" label="FG_REMOVE_BAD" description="FG_REMOVE_BAD_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="remove_ms" type="radio" default="0" label="FG_REMOVE_MS" description="FG_REMOVE_MS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="tidy" type="list" default="0" label="FG_TIDY" description="FG_TIDY_DESC">
+			<option value="0">None</option>
+			<option value="-1">Compress</option>
+			<option value="1">Beautify</option>
+		</field>
+	</fieldset>
+	<fieldset group="import_1">
+		<field name="filtering" type="radio" default="0" label="FG_FILTERING" description="FG_FILTERING_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	</fieldset>
+	<fieldset group="import_2">
+		<field name="save_filter_result" type="radio" default="0" label="FG_SAVE_FILTER_RESULT" description="FG_SAVE_FILTER_RESULT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	</fieldset>
+	<fieldset group="import_3">
+		<field name="filter_whitelist" type="textarea" default="" rows="10" cols="60" label="FG_WHITELIST" description="FG_WHITELIST_DESC" />
+		<field name="filter_blacklist" type="textarea" default="" rows="10" cols="60" label="FG_BLACKLIST" description="FG_BLACKLIST_DESC" />
+	</fieldset>
+	<fieldset group="tagging">
+		<field name="compute_tags" type="radio" default="0" label="FG_ADD_META" description="FG_ADD_META_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="use_addkeywords" type="radio" default="0" label="FG_USE_ADDKEYWORDS" description="FG_USE_ADDKEYWORDS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="use_yahoo_te" type="radio" default="0" label="FG_USE_YAHOO" description="FG_USE_YAHOO_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="yahoo_app_id" type="text" default="feedgatortemp" label="FG_YAHOO_ID" description="FG_YAHOO_ID_DESC" />
+		<field name="max_tags" type="text" default="5" label="FG_MAX_TAGS" description="FG_MAX_TAGS_DESC" />
+		<field name="min_tag_chars" type="text" default="3" label="FG_MIN_TAGS" description="FG_MIN_TAGS_DESC" />
+		<field name="use_ignore_list" type="radio" default="0" label="FG_IGNORE_LIST" description="FG_IGNORE_LIST_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ignore_list" type="textarea" default="" rows="3" cols="50" label="FG_ADDITIONAL_IGNORE_LIST" description="FG_ADDITIONAL_IGNORE_LIST_DESC">
+		</field>
+		<field name="save_feed_cats" type="radio" default="0" label="FG_FEED_CATS" description="FG_FEED_CATS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="save_sect_cats" type="radio" default="0" label="FG_JOOMLA_SEC_CAT" description="FG_JOOMLA_SEC_CAT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	</fieldset>
+	<fieldset group="email">
+		<field name="email_admin" type="radio" default="0" label="FG_EMAIL_REPORT" description="FG_EMAIL_REPORT_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="send_if_null" type="radio" default="1" label="FG_EMAIL_REPORT_NULL" description="FG_EMAIL_REPORT_NULL_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="email_digest" type="radio" default="1" label="FG_EMAIL_DIGEST" description="FG_EMAIL_DIGEST_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="digest_period" type="list" default="24" label="FG_DIGEST_PERIOD" description="FG_DIGEST_PERIOD_DESC">
+			<option value="1">1hr</option>
+			<option value="6">6hrs</option>
+			<option value="12">12hrs</option>
+			<option value="24">24hrs</option>
+			<option value="48">48hrs</option>
+			<option value="72">72hrs</option>
+			<option value="168">1 week</option>
+		</field>
+		<field name="admin_email" type="text" default="" size="40" label="FG_ADMIN_EMAIL" description="FG_ADMIN_EMAIL_DESC" />
+		<field name="email_subject" type="text" default="FeedGator Imports" size="40" label="FG_EMAIL_SUBJ" description="FG_EMAIL_SUBJ_DESC" />
+		<field name="html_email" type="radio" default="0" label="FG_HTML_EMAIL" description="FG_HTML_EMAIL_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	</fieldset>
+	<fieldset group="advanced" addpath="/administrator/components/com_feedgator/elements">
+		<field name="base" type="fgbase" default=""  size="50" label="FG_BASE" description="FG_BASE_DESC" />
+		<field name="scrape_type" type="radio" default="cURL" label="FG_SCRAPE_TYPE" description="FG_SCRAPE_TYPE_DESC">
+			<option value="cURL">cURL</option>
+			<option value="fopen">fopen</option>
+		</field>
+		<field name="force_fsockopen" type="radio" default="0" label="FG_FORCE_FSOCK" description="FG_FORCE_FSOCK_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="img_check" type="radio" default="1" label="FG_IMAGE_CHECK" description="FG_IMAGE_CHECK_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="use_sp_cache" type="radio" default="0" label="FG_SP_CACHE" description="FG_SP_CACHE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="set_sp_timeout" type="text" default="" label="FG_SP_TIMEOUT" description="FG_SP_TIMEOUT_DESC" />
+		<field name="debug" type="radio" default="0" label="FG_DEBUG" description="FG_DEBUG_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	</fieldset>
+</config>

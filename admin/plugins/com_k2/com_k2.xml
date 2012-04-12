@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="fgplugin" version="1.5.0" method="upgrade">
+ <name>K2 Content Plugin</name>
+ <author>Matt Faulds</author>
+ <creationDate>Sept 2010</creationDate>
+ <updatedDate>28 April 2011</updatedDate>
+ <copyright>Copyright 2010 Trafalgar Design</copyright>
+ <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+ <authorEmail>webmaster@trafalgardesign.com</authorEmail>
+ <authorUrl>http://www.trafalgardesign.com</authorUrl>
+ <version>1.7.3</version>
+ <description>Plugin to allow importing of content into K2 component comk2. Requires Feed Gator 2.3R (stable) or later.</description>
+ <files destination="com_k2">
+  <filename fgplugin="com_k2">com_k2.php</filename>
+  <filename>com_k2.png</filename>
+ </files>
+ <params>
+  <param type="spacer" default="FG_PLG_NO_PARAMS"/>
+ </params>
+</install>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+	<name>System - FeedGator pseudo-cron Plugin</name>
+	<author>Matt Faulds</author>
+	<creationDate>October 2009</creationDate>
+	<copyright>Trafalgar Design (UK) Ltd</copyright>
+	<license>GPL 2.0</license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://www.trafalgardesign.com</authorUrl>
+	<version>0.1</version>
+	<description>FeedGator pseudo-cron plugin allows automation of RSS content imports by triggering import functions when users visit your site. Based on the AutoTweet Automator plugin by Ulli Storck.</description>
+	<files>
+		<filename plugin="feedgatorpseudocron">feedgatorpseudocron.php</filename>
+	</files>
+	<languages>
+	   <language tag="en-GB">en-GB.plg_system_feedgatorpseudocron.ini</language>
+	</languages>
+	<params>
+		<param name="interval" type="text" default="5" label="FG_PLG_PCP_INT" description="FG_PLG_PCP_INT_DESC" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="interval" type="text" default="5" label="FG_PLG_PCP_INT" description="FG_PLG_PCP_INT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+ <name>FeedGator</name>
+ <creationDate>Aug 2010</creationDate>
+ <author>Matt Faulds</author>
+ <authorEmail>mattfaulds@gmail.com</authorEmail>
+ <authorUrl>joomlacode.org/gf/project/feedgator | trafalgardesign.com</authorUrl>
+ <copyright>Copyright 2005-2010 Stephen Simmons, Jozef Kapusciarz &amp; Matt Faulds. All rights reserved!</copyright>
+ <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+ <version>2.3.6</version>
+ <description>FG_DESCRIPTION</description>
+ <installfile>install.feedgator.php</installfile>
+ <uninstallfile>uninstall.feedgator.php</uninstallfile>
+ <files folder="site">
+  <filename>index.html</filename>
+  <filename>feedgator.php</filename>
+  <filename>views/index.html</filename>
+  <filename>views/default/index.html</filename>
+  <filename>views/default/metadata.xml</filename>
+ </files>
+ <media destination="feedgator" folder="media/feedgator">
+  <filename>index.html</filename>
+  <folder>attachments</folder>
+  <folder>images</folder>
+  <folder>videos</folder>
+  <folder>audio</folder>
+ </media>
+ <administration>
+  <menu img="components/com_feedgator/images/feedgator_16.png">FG_FEED_GATOR</menu>
+  <submenu>
+  	<menu task="cpanel">FG_CPANEL</menu>
+	<menu task="feeds">FG_MAN_FEEDS</menu>
+	<menu task="settings">FG_SETTINGS</menu>
+	<menu task="plugins">FG_PLUGINS</menu>
+	<menu task="tools">FG_TOOLS</menu>
+	<menu task="imports">FG_IMPORTS</menu>
+	<menu task="support">FG_SUPPORT</menu>
+	<menu task="about">FG_ABOUT</menu>
+  </submenu>
+  <files folder="admin">
+  	<filename>index.html</filename>
+  	<filename>admin.feedgator.php</filename>
+  	<filename>factory.feedgator.php</filename>
+  	<filename>plugin.feedgator.installer.php</filename>
+  	<filename>cron.feedgator.php</filename>
+  	<filename>controller.php</filename>
+  	<filename>toolbar.feedgator.html.php</filename>
+  	<filename>toolbar.feedgator.php</filename>
+   	<folder>css</folder>
+   	<folder>elements</folder>
+   	<folder>inc</folder>
+   	<folder>images</folder>
+   	<folder>helpers</folder>
+   	<folder>models</folder>
+   	<folder>plugins</folder>
+   	<folder>tables</folder>
+   	<folder>views</folder>
+  </files>
+  <languages folder="language">
+	<language tag="en-GB">en-GB.com_feedgator.ini</language>
+	<language tag="en-GB">en-GB.com_feedgator.menu.ini</language>
+	<language tag="en-GB">en-GB.com_feedgator.sys.ini</language>
+  </languages>
+ </administration>
+</install>

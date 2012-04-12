@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="fgplugin" version="1.5.0" method="upgrade">
+	<name>Joomla Native Content Plugin</name>
+	<author>Matt Faulds</author>
+	<creationDate>Sept 2010</creationDate>
+	<updatedDate>28 April 2011</updatedDate>
+	<copyright>Copyright 2010 Trafalgar Design</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>webmaster@trafalgardesign.com</authorEmail>
+	<authorUrl>http://www.trafalgardesign.com</authorUrl>
+	<version>1.8.3</version>
+	<description>Plugin to allow importing of content into native Joomla (com_content). Requires Feed Gator 2.3 (stable) or later.</description>
+	<files destination="com_content">
+		<filename fgplugin="com_content">com_content.php</filename>
+		<filename>contentmodel.php</filename>
+		<filename>com_content.png</filename>
+	</files>
+	<params>
+		<param type="spacer" default="FG_PLG_NO_PARAMS"/>
+    </params>
+</install>
