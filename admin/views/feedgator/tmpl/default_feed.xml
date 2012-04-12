@@ -288,30 +288,6 @@
 		<param name="text_filter_replace" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RPLC" description="FG_TEXT_FLTR_RPLC_DESC" />
 		<param name="text_filter_regex" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RGX" description="FG_TEXT_FLTR_RGX_DESC" />
 	</params>
-	/**<params group="html">
-		<param name="remove_by_attrib" type="textarea" default="" rows="5" cols="60" label="FG_RMV_BY_ATTRIB" description="FG_RMV_BY_ATTRIB_DESC" />
-		<param name="disallow_attribs" type="radio" default="0" label="FG_DISALLOW_ATTRIBS" description="FG_DISALLOW_ATTRIBS_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="remove_dups_emp" type="radio" default="1" label="FG_REMOVE_DUPS_EMP" description="FG_REMOVE_DUPS_EMP_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="remove_bad" type="radio" default="0" label="FG_REMOVE_BAD" description="FG_REMOVE_BAD_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="remove_ms" type="radio" default="0" label="FG_REMOVE_MS" description="FG_REMOVE_MS_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="tidy" type="list" default="0" label="FG_TIDY" description="FG_TIDY_DESC">
-			<option value="0">None</option>
-			<option value="-1">Compress</option>
-			<option value="1">Beautify</option>
-		</param>
-	</params>**/
 	<params group="import_1">
 		<param name="filtering" type="radio" default="0" label="FG_FILTERING" description="FG_FILTERING_DESC">
 			<option value="0">No</option>
