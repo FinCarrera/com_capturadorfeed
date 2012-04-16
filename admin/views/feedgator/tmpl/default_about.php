@@ -17,8 +17,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 <div class="fgnarrow">
 	<div class="fglogo"></div>
 	<h1>FeedGator RSS news feed aggregator component for Joomla!</h1>
-
-	<?php FeedgatorHelper::renderVersionUpdatePanel($this->version_data); ?>
+	
 	<p><strong>FeedGator</strong> imports RSSfeeds into your Joomla! database as regular content items, so you can get more control of the syndicated content on your site. Display RSS content in blog format, or any other method supported by Joomla! Turn your site into a sophisticated news reader.<br />
 	This component (or derivatives) is what drives the news section of many Joomla! websites. FeedGator has lots of features to give you the power to manipulate the imported content in useful ways.</p>
 	<p>Now maintained by Matthew Faulds (<span class="blue"><a href="http://www.trafalgardesign.com">Trafalgar Design</a></span>)</p>

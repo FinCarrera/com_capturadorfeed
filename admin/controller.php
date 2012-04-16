@@ -97,7 +97,7 @@ class FeedgatorController extends JController
 			echo $view->display('imports');
 			jexit();
 		}
-		$view->display('imports');
+		$view->display('imports'); 
 	}
 
 	function about()
