@@ -335,34 +335,33 @@
 			<option value="1">Yes</option>
 		</param>
 	</params>
-	<params group="advanced" addpath="/administrator/components/com_feedgator/elements">
-		<param name="base" type="fgbase" default=""  size="50" label="FG_BASE" description="FG_BASE_DESC" />
-		<param name="scrape_type" type="radio" default="cURL" label="FG_SCRAPE_TYPE" description="FG_SCRAPE_TYPE_DESC">
+	<!--params group="advanced" addpath="/administrator/components/com_feedgator/elements">
+		<param name="scrape_type" type="radio" default="cURL">
 			<option value="cURL">cURL</option>
 			<option value="fopen">fopen</option>
 		</param>
-		<param name="force_fsockopen" type="radio" default="0" label="FG_FORCE_FSOCK" description="FG_FORCE_FSOCK_DESC">
+		<param name="force_fsockopen" type="radio" default="0">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
-		<param name="img_check" type="radio" default="1" label="FG_IMAGE_CHECK" description="FG_IMAGE_CHECK_DESC">
+		<param name="img_check" type="radio" default="1">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
-		<param name="use_sp_cache" type="radio" default="0" label="FG_SP_CACHE" description="FG_SP_CACHE_DESC">
+		<param name="use_sp_cache" type="radio" default="0">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
-		<param name="set_sp_timeout" type="text" default="" label="FG_SP_TIMEOUT" description="FG_SP_TIMEOUT_DESC" />
-		<param name="debug" type="radio" default="0" label="FG_DEBUG" description="FG_DEBUG_DESC">
+		<param name="set_sp_timeout" type="text" default=""/>
+		<param name="debug" type="radio" default="0">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
-		<param name="notify_dev" type="radio" default="0" label="FG_NOTIFY_DEV" description="FG_NOTIFY_DEV_DESC">
+		<param name="notify_dev" type="radio" default="0">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
-	</params>
+	</params-->
 
 	<fieldset group="global_feed" addpath="/administrator/components/com_feedgator/elements">
 		<field name="default_type" type="fgcontent" size="10" label="FG_DEFAULT_TYPE" description="FG_DEFAULT_TYPE_DESC" />		
