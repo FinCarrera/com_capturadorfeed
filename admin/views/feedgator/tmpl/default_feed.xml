@@ -693,28 +693,28 @@
 			<option value="1">Yes</option>
 		</field>
 	</fieldset>
-	<fieldset group="advanced" addpath="/administrator/components/com_feedgator/elements">
-		<field name="base" type="fgbase" default=""  size="50" label="FG_BASE" description="FG_BASE_DESC" />
-		<field name="scrape_type" type="radio" default="cURL" label="FG_SCRAPE_TYPE" description="FG_SCRAPE_TYPE_DESC">
+	<!--fieldset group="advanced" addpath="/administrator/components/com_feedgator/elements">
+		<field name="base" type="fgbase" default=""  size="50"/>
+		<field name="scrape_type" type="radio" default="cURL">
 			<option value="cURL">cURL</option>
 			<option value="fopen">fopen</option>
 		</field>
-		<field name="force_fsockopen" type="radio" default="0" label="FG_FORCE_FSOCK" description="FG_FORCE_FSOCK_DESC">
+		<field name="force_fsockopen" type="radio" default="0">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</field>
-		<field name="img_check" type="radio" default="1" label="FG_IMAGE_CHECK" description="FG_IMAGE_CHECK_DESC">
+		<field name="img_check" type="radio" default="1">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</field>
-		<field name="use_sp_cache" type="radio" default="0" label="FG_SP_CACHE" description="FG_SP_CACHE_DESC">
+		<field name="use_sp_cache" type="radio" default="0">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</field>
-		<field name="set_sp_timeout" type="text" default="" label="FG_SP_TIMEOUT" description="FG_SP_TIMEOUT_DESC" />
-		<field name="debug" type="radio" default="0" label="FG_DEBUG" description="FG_DEBUG_DESC">
+		<field name="set_sp_timeout" type="text" default=""/>
+		<field name="debug" type="radio" default="0">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</field>
-	</fieldset>
+	</fieldset-->
 </config>
