@@ -336,6 +336,7 @@
 		</param>
 	</params>
 	<!--params group="advanced" addpath="/administrator/components/com_feedgator/elements">
+		<param name="base" type="fgbase" default=""  size="50"/>
 		<param name="scrape_type" type="radio" default="cURL">
 			<option value="cURL">cURL</option>
 			<option value="fopen">fopen</option>
