@@ -658,47 +658,6 @@ class FeedgatorModelFeed extends JModel
 		$user = &JFactory::getUser();
 		$imports = $this->getImports();
 
-		if($content['id'] AND $fgParams->get('compare_existing') == 2) { // exhaustive duplicate check
-			$exists = FeedgatorHelper::findDuplicates($content,$imports,$fgParams->get('hash'),$content['id'],$fgParams,$thorough=true,$exhaustive=true);
-
-			if($exists AND is_int($exists)) {  // exists and no change
-				FeedgatorUtility::profiling('Already Imported: Exhaustive Duplicate Check');
-				return false;
-			}
-
-			//so now see what to do with new article
-			switch($fgParams->get('merging'))
-			{
-				case 0: //don't merge, make new
-
-					FeedgatorUtility::profiling('Already Imported: Ignore and Make New');
-					break;
-
-				case 1: //attempt to merge, makes new if fails
-
-					if(JString::strpos($exists['introtext'].$exists['fulltext'], $content['introtext'].$content['fulltext']) !== false) {
-						$exists['introtext'] = $content['introtext'];
-						$exists['fulltext'] = $content['fulltext'];
-
-						if($this->_plugin->save( $exists, $fgParams )) {
-							FeedgatorUtility::profiling('Already Imported: Merged Article');
-							return true;
-						}
-					}
-					FeedgatorUtility::profiling('Already Imported: Failed Merge and Make New');
-					break;
-
-				case 2: // over-write
-
-					$exists['introtext'] = $content['introtext'];
-					$exists['fulltext'] = $content['fulltext'];
-
-					$this->_plugin->save( $exists, $fgParams );
-					FeedgatorUtility::profiling('Already Imported: Overwritten');
-
-					return true;
-			}
-		}
 		return $this->_plugin->save( $content, $fgParams );
 	}
 }

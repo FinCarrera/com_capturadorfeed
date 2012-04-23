@@ -19,25 +19,25 @@
 		<param name="default_author_alias" type="text" default="" size="50" label="FG_DEFAULT_AUTHOR_ALIAS" description="FG_DEFAULT_AUTHOR_ALIAS_DESC" />		
 	</params>
 	<params group="feed_3">
-		<param name="published" type="radio" default="0" label="FG_FEED_PUBLISHED" description="FG_FEED_PUBLISHED_DESC">
+		<param name="published" type="radio" default="1" label="FG_FEED_PUBLISHED" description="FG_FEED_PUBLISHED_DESC">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 	</params>
 	<params group="publishing_1">
-		<param name="front_page" type="radio" default="0" label="FG_SHOW_FRONT" description="FG_SHOW_FRONT_DESC">
+		<param name="front_page" type="radio" default="1" label="FG_SHOW_FRONT" description="FG_SHOW_FRONT_DESC">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
 	</params>
 	<params group="publishing_2" addpath="/administrator/components/com_feedgator/elements">
-		<param name="auto_publish" type="radio" default="0" label="FG_PUB_AUTO" description="FG_PUB_AUTO_DESC">
+		<param name="auto_publish" type="radio" default="1" label="FG_PUB_AUTO" description="FG_PUB_AUTO_DESC">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
 		<param name="access" type="fgaccess" size="10" default="0" label="FG_ACCESS_LEVEL" description="FG_ACCESS_LEVEL_DESC" />		
-		<param name="created_date" type="list" default="0" label="FG_CREATED_DATE" description="FG_CREATED_DATE_DESC">
+		<param name="created_date" type="list" default="1" label="FG_CREATED_DATE" description="FG_CREATED_DATE_DESC">
 			<option value="0">Use Feed Date</option>
 			<option value="1">Use Processed Date</option>
 		</param>
@@ -45,7 +45,7 @@
 			<option value="0">Use Feed Date</option>
 			<option value="1">Use Processed Date</option>
 		</param>
-		<param name="advance_date" type="radio" default="0" label="FG_ALLOW_FUTURE" description="FG_ALLOW_FUTURE_DESC">
+		<param name="advance_date" type="radio" default="1" label="FG_ALLOW_FUTURE" description="FG_ALLOW_FUTURE_DESC">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
@@ -63,29 +63,7 @@
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="cron_interval" type="text" default="5" label="FG_CRON_INTERVAL" description="FG_CRON_INTERVAL_DESC" />
 		<param name="pseudocron_interval" type="text" default="5" label="FG_PSEUDOCRON_INTERVAL" description="FG_PSEUDOCRON_INTERVAL_DESC" />
-		<param name="@spacer" type="spacer" default="" label="" description="" />		
-		<param name="check_existing" type="list" default="0" label="FG_CHECK_EXIST" description="FG_CHECK_EXIST_DESC">
-			<option value="0">Trust Feed Identifiers</option>
-			<option value="1">Perform Checks</option>
-		</param>
-		<param name="compare_existing" type="list" default="0" label="FG_COMPARE_EXIST" description="FG_COMPARE_EXIST_DESC">
-			<option value="0">Basic</option>
-			<option value="1">Thorough</option>
-			<option value="2">Exhaustive</option>
-		</param>
-		<param name="force_new" type="radio" default="0" label="FG_FORCE_NEW" description="FG_FORCE_NEW_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="check_text" type="radio" default="1" label="FG_CHECK_TEXT_TYPE" description="FG_CHECK_TEXT_TYPE_DESC">
-			<option value="0">Full Text</option>
-			<option value="1">Intro Text</option>
-		</param>
-		<param name="merging" type="list" default="1" label="FG_MERGE_TYPE" description="FG_MERGE_TYPE_DESC">
-			<option value="0">Don't Merge - Make New</option>
-			<option value="1">Merge Text</option>
-			<option value="2">Over-write</option>
-		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />	
 	</params>
 	<params group="text_1">
 		<param name="create_art" type="radio" default="1" label="FG_CREATE_ART" description="FG_CREATE_ART_DESC">
@@ -402,24 +380,6 @@
 		<field name="cron_interval" type="text" default="5" label="FG_CRON_INTERVAL" description="FG_CRON_INTERVAL_DESC" />
 		<field name="pseudocron_interval" type="text" default="5" label="FG_PSEUDOCRON_INTERVAL" description="FG_PSEUDOCRON_INTERVAL_DESC" />
 		<field name="@spacer" type="spacer" default="" label="" description="" />
-		<field name="check_existing" type="list" default="0" label="FG_CHECK_EXIST" description="FG_CHECK_EXIST_DESC">
-			<option value="0">Trust Feed Identifiers</option>
-			<option value="1">Perform Checks</option>
-		</field>
-		<field name="compare_existing" type="list" default="0" label="FG_COMPARE_EXIST" description="FG_COMPARE_EXIST_DESC">
-			<option value="0">Basic</option>
-			<option value="1">Thorough</option>
-			<option value="2">Exhaustive</option>
-		</field>
-		<field name="check_text" type="radio" default="1" label="FG_CHECK_TEXT_TYPE" description="FG_CHECK_TEXT_TYPE_DESC">
-			<option value="0">Full Text</option>
-			<option value="1">Intro Text</option>
-		</field>
-		<field name="merging" type="list" default="1" label="FG_MERGE_TYPE" description="FG_MERGE_TYPE_DESC">
-			<option value="0">Don't Merge - Make New</option>
-			<option value="1">Merge Text</option>
-			<option value="2">Over-write</option>
-		</field>
 	</fieldset>
 	<fieldset group="text_1">
 		<field name="create_art" type="radio" default="1" label="FG_CREATE_ART" description="FG_CREATE_ART_DESC">
