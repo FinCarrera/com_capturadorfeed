@@ -65,7 +65,8 @@ class JElementFGContent extends JElement
 		$plugins = $pluginModel->loadInstalledPlugins();
 		
 		$options = array();
-		$options[] = JHTML::_('select.option', -1, $type ? '- '.JText::_('FG_CHOOSE_CONTENT').' -' : '- '.JText::_('FG_DEFAULT_CONTENT').' -', 'id', 'title');
+		
+		
 		foreach($plugins as $plugin) {
 			if($plugin->published) {
 				$options[] = JHTML::_('select.option', $plugin->extension, $plugin->name, 'id', 'title');

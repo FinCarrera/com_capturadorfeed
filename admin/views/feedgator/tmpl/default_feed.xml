@@ -5,18 +5,6 @@
 		<param name="default_type" type="fgcontent" size="10" label="FG_DEFAULT_TYPE" description="FG_DEFAULT_TYPE_DESC" />		
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
-		<param name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
-			<option value="0">Don't Save</option>
-			<option value="1">Use Default Joomla Author Alias</option>
-			<option value="2">Use Default Feed Author Alias</option>
-			<option value="3">Use Feed Author -> if not set use Feed Title</option>
-			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
-		</param>
-		<param name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
-			<option value="0">No</option>
-			<option value="top">Top</option>
-			<option value="bottom">bottom</option>
-		</param>
 	</params>
 	<params group="feed_1" addpath="/administrator/components/com_feedgator/elements">
 		<param name="title" type="text" default="" size="50" label="FG_FEED_TITLE" description="FG_FEED_TITLE_DESC" />
@@ -28,19 +16,7 @@
 		<param name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
 	</params>
 	<params group="feed_2">
-		<param name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
-			<option value="0">Don't Save</option>
-			<option value="1">Use Default Joomla Author Alias</option>
-			<option value="2">Use Default Feed Author Alias</option>
-			<option value="3">Use Feed Author -> if not set use Feed Title</option>
-			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
-		</param>
-		<param name="default_author_alias" type="text" default="" size="50" label="FG_DEFAULT_AUTHOR_ALIAS" description="FG_DEFAULT_AUTHOR_ALIAS_DESC" />
-		<param name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
-			<option value="0">No</option>
-			<option value="top">Top</option>
-			<option value="bottom">bottom</option>
-		</param>		
+		<param name="default_author_alias" type="text" default="" size="50" label="FG_DEFAULT_AUTHOR_ALIAS" description="FG_DEFAULT_AUTHOR_ALIAS_DESC" />		
 	</params>
 	<params group="feed_3">
 		<param name="published" type="radio" default="0" label="FG_FEED_PUBLISHED" description="FG_FEED_PUBLISHED_DESC">
@@ -368,18 +344,6 @@
 		<field name="default_type" type="fgcontent" size="10" label="FG_DEFAULT_TYPE" description="FG_DEFAULT_TYPE_DESC" />		
 		<field name="@spacer" type="spacer" default="" label="" description="" />
 		<field name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
-		<field name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
-			<option value="0">Don't Save</option>
-			<option value="1">Use Default Joomla Author Alias</option>
-			<option value="2">Use Default Feed Author Alias</option>
-			<option value="3">Use Feed Author -> if not set use Feed Title</option>
-			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
-		</field>
-		<field name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
-			<option value="0">No</option>
-			<option value="top">Top</option>
-			<option value="bottom">bottom</option>
-		</field>
 	</fieldset>
 	<fieldset group="feed_1" addpath="/administrator/components/com_feedgator/elements">
 		<field name="title" type="text" default="" size="50" label="FG_FEED_TITLE" description="FG_FEED_TITLE_DESC" />
@@ -391,19 +355,7 @@
 		<field name="default_author" type="fgauthors" size="10" label="FG_DEFAULT_AUTHOR" description="FG_DEFAULT_AUTHOR_DESC" />
 	</fieldset>
 	<fieldset group="feed_2">
-		<field name="save_author" type="list" default="0" label="FG_SAVE_AUTHOR" description="FG_SAVE_AUTHOR_DESC">
-			<option value="0">Don't Save</option>
-			<option value="1">Use Default Joomla Author Alias</option>
-			<option value="2">Use Default Feed Author Alias</option>
-			<option value="3">Use Feed Author -> if not set use Feed Title</option>
-			<option value="4">Use Feed Author -> if not set use Default Feed Author Alias</option>
-		</field>
-		<field name="default_author_alias" type="text" default="" size="50" label="FG_DEFAULT_AUTHOR_ALIAS" description="FG_DEFAULT_AUTHOR_ALIAS_DESC" />
-		<field name="feed_author_article" type="list" default="0" label="FG_ADD_AUTHOR" description="FG_ADD_AUTHOR_DESC">
-			<option value="0">No</option>
-			<option value="top">Top</option>
-			<option value="bottom">bottom</option>
-		</field>		
+		<field name="default_author_alias" type="text" default="" size="50" label="FG_DEFAULT_AUTHOR_ALIAS" description="FG_DEFAULT_AUTHOR_ALIAS_DESC" />		
 	</fieldset>
 	<fieldset group="feed_3">
 		<field name="published" type="radio" default="0" label="FG_FEED_PUBLISHED" description="FG_FEED_PUBLISHED_DESC">
