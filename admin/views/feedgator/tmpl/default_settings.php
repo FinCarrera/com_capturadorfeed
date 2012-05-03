@@ -83,12 +83,6 @@ $pane =& JPane::getInstance('tabs',$options);
 		echo $this->params->render('params','tagging');
 		
 		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_ADV'),'panel13');
-		
-		echo $this->params->render('params','advanced');
-		
-		echo $pane->endPanel();
-		echo $pane->endPane();
 		
 	} else {
 	
