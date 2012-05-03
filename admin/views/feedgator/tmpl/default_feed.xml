@@ -289,35 +289,6 @@
 			<option value="1">Yes</option>
 		</param>
 	</params>
-	<!--params group="advanced" addpath="/administrator/components/com_feedgator/elements">
-		<param name="base" type="fgbase" default=""  size="50"/>
-		<param name="scrape_type" type="radio" default="cURL">
-			<option value="cURL">cURL</option>
-			<option value="fopen">fopen</option>
-		</param>
-		<param name="force_fsockopen" type="radio" default="0">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="img_check" type="radio" default="1">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="use_sp_cache" type="radio" default="0">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="set_sp_timeout" type="text" default=""/>
-		<param name="debug" type="radio" default="0">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="notify_dev" type="radio" default="0">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-	</params-->
-
 	<fieldset group="global_feed" addpath="/administrator/components/com_feedgator/elements">
 		<field name="default_type" type="fgcontent" size="10" label="FG_DEFAULT_TYPE" description="FG_DEFAULT_TYPE_DESC" />		
 		<field name="@spacer" type="spacer" default="" label="" description="" />
@@ -605,28 +576,4 @@
 			<option value="1">Yes</option>
 		</field>
 	</fieldset>
-	<!--fieldset group="advanced" addpath="/administrator/components/com_feedgator/elements">
-		<field name="base" type="fgbase" default=""  size="50"/>
-		<field name="scrape_type" type="radio" default="cURL">
-			<option value="cURL">cURL</option>
-			<option value="fopen">fopen</option>
-		</field>
-		<field name="force_fsockopen" type="radio" default="0">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="img_check" type="radio" default="1">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="use_sp_cache" type="radio" default="0">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="set_sp_timeout" type="text" default=""/>
-		<field name="debug" type="radio" default="0">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-	</fieldset-->
 </config>
