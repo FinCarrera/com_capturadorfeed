@@ -61,7 +61,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
 	
 	
 	<h3 class="blue">Release Notes</h3>
-	<?php if(!$page = FeedgatorUtility::getUrl('http://www.trafalgardesign.com/index.php?view=article&id=45&tmpl=component',$this->fgParams->get('scrape_type'))) {
+	<?php if(!$page = FeedgatorUtility::getUrl('http://www.trafalgardesign.com/index.php?view=article&id=45&tmpl=component',$this->fgParams->get(cURL))) {
 		echo 'The release notes require an internet connection and cURL to be active on your PHP installation.';
 	} else {
 		$regex = '#<div id="page">([\s\S]*?)<\/div>#';

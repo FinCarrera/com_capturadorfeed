@@ -267,7 +267,7 @@ class FeedgatorModelFeed extends JModel
 		$totItems = 0;
 
 		$cacheDir = JPATH_ROOT.DS.'cache';
-		$cache_exists = ( !$fgConfig->get('use_sp_cache') OR !is_writable( $cacheDir ) ) ? false : true;
+		$cache_exists = ( !$fgConfig-> false OR !is_writable( $cacheDir ) ) ? false : true;
 
 		if(!ini_get('allow_url_fopen')) ini_set('allow_url_fopen', 1); //allows importing images and text
 
@@ -320,9 +320,6 @@ class FeedgatorModelFeed extends JModel
 						$rssDoc->set_input_encoding($fgParams->get('feed_encoding'));
 					}
 					$rssDoc->set_feed_url($fgParams->get('feed'));
-					if ($fgParams->get('force_fsockopen')) {
-						$rssDoc->force_fsockopen(true);
-					}
 					if($cache_exists) {
 						$rssDoc->set_cache_location($cacheDir);
 						$rssDoc->enable_cache(true);
@@ -332,8 +329,8 @@ class FeedgatorModelFeed extends JModel
 					}
 					$rssDoc->set_stupidly_fast(true);
 					$rssDoc->enable_order_by_date(true);
-					if($fgParams->get('set_sp_timeout')) {
-						$rssDoc->set_timeout((int)$fgParams->get('set_sp_timeout'));
+					if($fgParams->get('')) {
+						$rssDoc->set_timeout((int)$fgParams->get(''));
 					}
 					$rssDoc->init();
 					//$rssDoc->handle_content_type();
@@ -421,7 +418,7 @@ class FeedgatorModelFeed extends JModel
 					$totItems += $addItems;
 
 					FeedgatorUtility::profiling('End Process Feed: '.$feedId);
-					if($fgParams->get('debug')) {
+					if(0) {
 						FeedgatorUtility::debugfile('<pre>'.print_r($p->getBuffer(),true).'</pre>');
 						if(J_VERSION < 1.6) unset($p->_buffer);
 					}
@@ -442,7 +439,7 @@ class FeedgatorModelFeed extends JModel
 		
 		$ajax = JRequest::getInt('ajax',0,'get');
 	
-		if($fgParams->get('debug')) {
+		if(0) {
 			if(isset($p->_buffer)) {
 				FeedgatorUtility::debugfile('<pre>'.print_r($p->getBuffer(),true).'</pre>');
 				if(J_VERSION < 1.6) unset($p->_buffer);
