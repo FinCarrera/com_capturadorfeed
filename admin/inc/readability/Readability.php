@@ -146,6 +146,18 @@ class Readability
 		$clean_config = array();
 		$regex = '/(?:\-|\+|\*)?([\S]*)\s+([^=]*)=([\s\S]*)/';
 
+		$parts = $fgParams->get('remove_by_attrib');
+		if(strpos($parts,'+') !== false) {
+			$parts = explode(',',$parts);	
+			foreach($parts as $part) {
+				if(strpos($part,'+') !== false) {
+					$part = FeedgatorUtility::str_replace_first('+','',$part);
+					preg_match($regex,$part,$matches);
+					if(!empty($matches)) { // this is seriously ugly!
+						$clean_config[$matches[1]][$matches[2]] = empty($clean_config[$matches[1]][$matches[2]]) ? array($matches[3]) : array_merge($clean_config[$matches[1]][$matches[2]],array($matches[3]));
+					}
+				}
+			}
 			$body = $this->dom->getElementsByTagName('body')->item(0);
 			$root = $body->parentNode;
 			$nBody = $this->dom->createElement('body');
@@ -181,7 +193,7 @@ class Readability
 	public function init()
 	{
 		global $fgParams; //FG edit
-		$this->debug = 0; //FG edit
+		$this->debug = $fgParams->get('debug'); //FG edit
 
 		$this->removeScripts($this->dom);
 		//die($this->getInnerHTML($this->dom->documentElement));
@@ -268,7 +280,7 @@ class Readability
 	* Debug
 	*/
 	public function dbg($msg) { //FG edit
-		if (0) $this->debugMsg .= '* '.$msg.'<br />'."\n";
+		if ($this->debug) $this->debugMsg .= '* '.$msg.'<br />'."\n";
 	}
 	
 	/**
