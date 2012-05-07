@@ -258,37 +258,6 @@
 		<param name="filter_whitelist" type="textarea" default="" rows="10" cols="60" label="FG_WHITELIST" description="FG_WHITELIST_DESC" />
 		<param name="filter_blacklist" type="textarea" default="" rows="10" cols="60" label="FG_BLACKLIST" description="FG_BLACKLIST_DESC" />
 	</params>
-	<params group="tagging">
-		<param name="compute_tags" type="radio" default="0" label="FG_ADD_META" description="FG_ADD_META_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="use_addkeywords" type="radio" default="0" label="FG_USE_ADDKEYWORDS" description="FG_USE_ADDKEYWORDS_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="use_yahoo_te" type="radio" default="0" label="FG_USE_YAHOO" description="FG_USE_YAHOO_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="yahoo_app_id" type="text" default="feedgatortemp" label="FG_YAHOO_ID" description="FG_YAHOO_ID_DESC" />
-		<param name="max_tags" type="text" default="5" label="FG_MAX_TAGS" description="FG_MAX_TAGS_DESC" />
-		<param name="min_tag_chars" type="text" default="3" label="FG_MIN_TAGS" description="FG_MIN_TAGS_DESC" />
-		<param name="use_ignore_list" type="radio" default="0" label="FG_IGNORE_LIST" description="FG_IGNORE_LIST_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="ignore_list" type="textarea" default="" rows="3" cols="50" label="FG_ADDITIONAL_IGNORE_LIST" description="FG_ADDITIONAL_IGNORE_LIST_DESC">
-		</param>
-		<param name="save_feed_cats" type="radio" default="0" label="FG_FEED_CATS" description="FG_FEED_CATS_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-		<param name="save_sect_cats" type="radio" default="0" label="FG_JOOMLA_SEC_CAT" description="FG_JOOMLA_SEC_CAT_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-	</params>
 	<fieldset group="global_feed" addpath="/administrator/components/com_feedgator/elements">
 		<field name="default_type" type="fgcontent" size="10" label="FG_DEFAULT_TYPE" description="FG_DEFAULT_TYPE_DESC" />		
 		<field name="@spacer" type="spacer" default="" label="" description="" />
@@ -544,36 +513,5 @@
 	<fieldset group="import_3">
 		<field name="filter_whitelist" type="textarea" default="" rows="10" cols="60" label="FG_WHITELIST" description="FG_WHITELIST_DESC" />
 		<field name="filter_blacklist" type="textarea" default="" rows="10" cols="60" label="FG_BLACKLIST" description="FG_BLACKLIST_DESC" />
-	</fieldset>
-	<fieldset group="tagging">
-		<field name="compute_tags" type="radio" default="0" label="FG_ADD_META" description="FG_ADD_META_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="use_addkeywords" type="radio" default="0" label="FG_USE_ADDKEYWORDS" description="FG_USE_ADDKEYWORDS_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="use_yahoo_te" type="radio" default="0" label="FG_USE_YAHOO" description="FG_USE_YAHOO_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="yahoo_app_id" type="text" default="feedgatortemp" label="FG_YAHOO_ID" description="FG_YAHOO_ID_DESC" />
-		<field name="max_tags" type="text" default="5" label="FG_MAX_TAGS" description="FG_MAX_TAGS_DESC" />
-		<field name="min_tag_chars" type="text" default="3" label="FG_MIN_TAGS" description="FG_MIN_TAGS_DESC" />
-		<field name="use_ignore_list" type="radio" default="0" label="FG_IGNORE_LIST" description="FG_IGNORE_LIST_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="ignore_list" type="textarea" default="" rows="3" cols="50" label="FG_ADDITIONAL_IGNORE_LIST" description="FG_ADDITIONAL_IGNORE_LIST_DESC">
-		</field>
-		<field name="save_feed_cats" type="radio" default="0" label="FG_FEED_CATS" description="FG_FEED_CATS_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
-		<field name="save_sect_cats" type="radio" default="0" label="FG_JOOMLA_SEC_CAT" description="FG_JOOMLA_SEC_CAT_DESC">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</field>
 	</fieldset>
 </config>

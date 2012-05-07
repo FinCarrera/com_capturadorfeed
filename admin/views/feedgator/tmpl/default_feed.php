@@ -136,10 +136,6 @@ if(J_VERSION < 1.6) {
 		echo $this->fgParams->render('params','import_2');
 		echo $this->fgParams->render('data','import_3');
 		
-		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_TAGGING'),'panel11');
-		
-		echo $this->fgParams->render('params','tagging');
 		
 	} else {
 		
@@ -195,10 +191,7 @@ if(J_VERSION < 1.6) {
 		echo FeedgatorHelper::renderForm($this->fgParams->getParams('params','import_2'));
 		echo FeedgatorHelper::renderForm($this->fgParams->getParams('data','import_3'),array('control'=>'data'));
 		
-		echo $pane->endPanel();
-		echo $pane->startPanel(JText::_('FG_TAB_TAGGING'),'panel11');
-		
-		echo FeedgatorHelper::renderForm($this->fgParams->getParams('params','tagging'));
+
 	}
 	
 	echo $pane->endPanel();
