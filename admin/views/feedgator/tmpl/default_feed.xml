@@ -234,11 +234,11 @@
 		<param name="bitly_api_key" type="text" default="" size="50" label="FG_BITLY_API" description="FG_BITLY_API_DESC" />
 	</params>
 	<params group="text">
-		<param name="text_filter" type="radio" default="0" label="FG_TEXT_FILTERING" description="FG_TEXT_FILTERING_DESC">
+		<param name="text_filter" type="radio" default="1" label="FG_TEXT_FILTERING" description="FG_TEXT_FILTERING_DESC">
 			<option value="0">No</option>
 			<option value="1">Yes</option>
 		</param>
-		<param name="text_filter_remove" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RMV" description="FG_TEXT_FLTR_RMV_DESC" />
+		<param name="text_filter_remove" type="textarea" default="1" rows="10" cols="60" label="FG_TEXT_FLTR_RMV" description="FG_TEXT_FLTR_RMV_DESC" />
 		<param name="text_filter_replace" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RPLC" description="FG_TEXT_FLTR_RPLC_DESC" />
 		<param name="text_filter_regex" type="textarea" default="" rows="10" cols="60" label="FG_TEXT_FLTR_RGX" description="FG_TEXT_FLTR_RGX_DESC" />
 	</params>
